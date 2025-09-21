@@ -40,7 +40,7 @@ pipeline {
             sh '''
               cd app
               TAG=$(git rev-parse --short HEAD)
-              docker build -t $DOCKERHUB:$TAG .
+              docker build -t $DOCKERHUB:latest .
               echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
               docker push $DOCKERHUB:$TAG
               echo $DOCKERHUB:$TAG > ../image.info
