@@ -66,8 +66,7 @@ pipeline {
   post { 
     always { 
       echo 'Pipeline completed'
-      archiveArtifacts artifacts: 'bookstore-app/app/security-reports/**', allowEmptyArchive: true
-    }
+      archiveArtifacts artifacts: 'bookstore-app/app/security-reports/**', allowEmptyArchive: true    }
     success {
       echo 'Build successful - Docker image pushed'
     }
