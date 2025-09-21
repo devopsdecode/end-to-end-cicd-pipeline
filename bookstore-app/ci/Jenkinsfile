@@ -42,8 +42,8 @@ pipeline {
               TAG=$(git rev-parse --short HEAD)
               docker build -t $DOCKERHUB:latest .
               echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-              docker push $DOCKERHUB:$TAG
-              echo $DOCKERHUB:$TAG > ../image.info
+              docker push $DOCKERHUB:latest
+              echo $DOCKERHUB:latest > ../image.info
             '''
           }
         }
@@ -56,8 +56,8 @@ pipeline {
             cd app
             mkdir -p security-reports
             TAG=$(git rev-parse --short HEAD)
-            docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/security-reports:/reports aquasec/trivy image --format json --output /reports/trivy-report.json $DOCKERHUB:$TAG || true
-            docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/security-reports:/reports aquasec/trivy image --format table --output /reports/trivy-report.txt $DOCKERHUB:$TAG || true
+            docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/security-reports:/reports aquasec/trivy image --format json --output /reports/trivy-report.json $DOCKERHUB:latest || true
+            docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/security-reports:/reports aquasec/trivy image --format table --output /reports/trivy-report.txt $DOCKERHUB:latest || true
           '''
         }
       }
