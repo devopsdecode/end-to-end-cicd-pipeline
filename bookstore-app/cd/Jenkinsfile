@@ -1,25 +1,23 @@
-pipeline {
-  agent any
-  environment {
-    WORKER_IP = '13.232.28.45'
-  }
-  parameters {
-    string(name: 'IMAGE_TAG', description: 'Docker image tag to deploy')
-  }
-  stages {
-    stage('Deploy to k8s') {
-      steps {
-        sh '''
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/ci-cd-end-to-end.pem ubuntu@${WORKER_IP} "export KUBECONFIG=/home/ubuntu/kubeconfig && kubectl set image deployment/bookstore bookstore=${IMAGE_TAG} --record"
-        '''
+  pipeline {
+    agent any
+    environment {
+      WORKER_IP = '43.205.198.88'
+      DOCKERHUB_IMAGE = 'devopsdecode/bookstore-app:latest'
+    }
+    stages {
+      stage('Deploy to k8s') {
+        steps {
+          sh '''
+            ssh -o StrictHostKeyChecking=no -i ~/.ssh/ci-cd-end-to-end.pem ubuntu@${WORKER_IP} "export KUBECONFIG=/home/ubuntu/kubeconfig && kubectl set image deployment/bookstore bookstore=${DOCKERHUB_IMAGE} --record"
+          '''
+        }
+      }
+      stage('Verify Deployment') {
+        steps {
+          sh '''
+            ssh -o StrictHostKeyChecking=no -i ~/.ssh/ci-cd-end-to-end.pem ubuntu@${WORKER_IP} "export KUBECONFIG=/home/ubuntu/kubeconfig && kubectl rollout status deployment/bookstore"
+          '''
+        }
       }
     }
-    stage('Verify Deployment') {
-      steps {
-        sh '''
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/ci-cd-end-to-end.pem ubuntu@${WORKER_IP} "export KUBECONFIG=/home/ubuntu/kubeconfig && kubectl rollout status deployment/bookstore"
-        '''
-      }
-    }
   }
-}
