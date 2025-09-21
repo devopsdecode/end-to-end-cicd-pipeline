@@ -31,9 +31,9 @@ app.get('/metrics', async (req, res) => {
 // Home Page - Travel Website UI
 app.get('/', (req, res) => {
   const html = `
-    <html><head><title>✈️ Travel Explorer</title><style>
-      body{font-family:Arial;margin:0;background:linear-gradient(to bottom,#d0e1f9,#ffffff);color:#333}
-      .header{background:#4b0082;color:white;text-align:center;padding:40px 20px}
+    <html><head><title>✈️ यात्रा अन्वेषक</title><style>
+      body{font-family:Arial;margin:0;background:linear-gradient(to bottom,#e0c3fc,#fbc2eb);color:#333}
+      .header{background:#d63384;color:white;text-align:center;padding:40px 20px}
       .header h1{margin:0;font-size:40px}
       .header p{margin:10px 0 0;font-size:18px}
       .packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;padding:30px}
@@ -44,11 +44,11 @@ app.get('/', (req, res) => {
       .info h3{margin:0;font-size:22px}
       .info p{font-size:14px;color:#666}
       .price{color:#e74c3c;font-weight:bold;font-size:20px;margin-top:10px}
-      .category{background:#ff4500;color:white;padding:5px 10px;border-radius:20px;font-size:12px;display:inline-block;margin-top:8px}
+      .category{background:#ff7f50;color:white;padding:5px 10px;border-radius:20px;font-size:12px;display:inline-block;margin-top:8px}
     </style></head><body>
       <div class="header">
-        <h1>✈️ Travel Explorer</h1>
-        <p>Your dream destinations, curated with love ❤️</p>
+        <h1>✈️ यात्रा अन्वेषक</h1>
+        <p>आपके सपनों की मंज़िलें, प्यार के साथ चुनी गई ❤️</p>
       </div>
       <div class="packages">
         ${travelPackages.map(p => `
