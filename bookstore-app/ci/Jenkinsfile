@@ -69,6 +69,8 @@ pipeline {
       archiveArtifacts artifacts: 'bookstore-app/app/security-reports/**', allowEmptyArchive: true    }
     success {
       echo 'Build successful - Docker image pushed'
+      build job: 'bookstore-app-cd', wait: false
+
     }
     failure {
       echo 'Build failed - check logs for details'
