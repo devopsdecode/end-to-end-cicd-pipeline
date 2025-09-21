@@ -32,7 +32,7 @@ app.get('/metrics', async (req, res) => {
 app.get('/', (req, res) => {
   const html = `
     <html><head><title>✈️ Travel Explorer</title><style>
-      body{font-family:Arial;margin:0;background:#f0f8ff;color:#333}
+      body{font-family:Arial;margin:0;background:linear-gradient(to bottom,#87cefa,#ffffff);color:#333}
       .header{background:#3498db;color:white;text-align:center;padding:40px 20px}
       .header h1{margin:0;font-size:40px}
       .header p{margin:10px 0 0;font-size:18px}
