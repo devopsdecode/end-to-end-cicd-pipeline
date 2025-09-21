@@ -1,0 +1,72 @@
+ubuntu@ip-10-0-1-196:~$ history 
+    1  exit
+    2  sudo systemctl status jenkins
+    3  exit
+    4  sudo systemctl status jenkins
+    5  kubectl get node
+    6  sudo kubectl get node
+    7  sudo docker ps
+    8  kubectl get all
+    9  sudo kubectl get all
+   10  kubectl --help
+   11  kubectl cluster-info
+   12  sudo kubectl cluster-info
+   13  kubectl get config
+   14  sudo kubectl get config
+   15  cat ~/.kube/config
+   16  sudo cat ~/.kube/config
+   17  sudo -i
+   18  ls
+   19  cat kubeconfig 
+   20  ls -rlth
+   21  exit
+   22  kubectl get node
+   23  sudo kubectl get node
+   24  sudo kubectl get pods
+   25  sudo kubectl get namespaces
+   26  sudo kubectl get pods
+   27  sudo kubectl get deployment
+   28  sudo kubectl get replicaset
+   29  kubectl get pod
+   30  sudo kubectl get pod
+   31  sudo kubectl get svc
+   32  sudo kubectl get nodeport
+   33  exit
+   34  sudo kubectl get nodeport
+   35  sudo kubectl get pod
+   36  exit
+   37  sudo kubectl get pod
+   38  ls
+   39  vim helm-monitoring-setup.sh
+   40  chmod +x helm-monitoring-setup.sh 
+   41  £sh -x helm-monitoring-setup.sh 
+   42  kubectl get pods
+   43  sudo kubectl get pods
+   44  sudo kubectl get deployment
+   45  sudo sh -x helm-monitoring-setup.sh 
+   46  sudo kubectl get pods
+   47  sudo kubectl get deployment
+   48  vim helm-monitoring-setup.sh
+   49  sudo sh -x helm-monitoring-setup.sh 
+   50  sudo kubectl  get 
+   51  sudo kubectl  get config
+   52  sudo kubectl api-resources
+   53  sudo sh -x helm-monitoring-setup.sh 
+   54  export KUBECONFIG=/home/ubuntu/kubeconfig
+   55  vim helm-monitoring-setup.sh
+   56  sudo sh -x helm-monitoring-setup.sh 
+   57  sudo kubectl get deployment
+   58  sudo kubectl get svc
+   59  exi
+   60  exit
+   61  kubectl get wsv
+   62  sudo kubectl get pods
+   63  sudo kubectl describe bookstore-848b7747b4-65z4x 
+   64  sudo kubectl describe pod bookstore-848b7747b4-65z4x 
+   65  \e
+   66  htop
+   67  sudo init 0
+   68  exigt
+   69  ls
+   70  exit
+   71  history 
