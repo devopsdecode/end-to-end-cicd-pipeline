@@ -1,0 +1,55 @@
+ubuntu@ip-10-0-1-161:~$ history 
+    1  exit
+    2  sudo systemctl status jenkins
+    3  cat /var/lib/jenkins/secrets/initialAdminPassword
+    4  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+    5  exit
+    6  sudo apt-get install -y nodejs
+    7  node -v
+    8  npm -v
+    9  sudo apt install npm
+   10  npm -v
+   11  node -v
+   12  exit
+   13  sudo usermod -aG docker jenkins
+   14  sudo systemctl restart jenkins
+   15  sudo su jenkins
+   16  exit
+   17  sudo su jenkins
+   18  exit
+   19  htop
+   20  sudo systemctl status jenkins
+   21  sudo systemctl stop jenkins
+   22  systemctl daemon-reload
+   23  sudo systemctl daemon-reload
+   24  sudo systemctl stop jenkins
+   25  sudo systemctl star jenkins
+   26  sudo systemctl start jenkins
+   27  htop
+   28  sudo systemctl status jenkins
+   29  iostat -xz 1 10
+   30  df -h
+   31  ps -ef | grep jenkins
+   32  iostat -xz 1 10
+   33  df -h
+   34  sudo init 0
+   35  wget wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+   36  exit
+   37  hto
+   38  htop
+   39  df -h
+   40  ip a
+   41  htop
+   42  sudo apt-get clean
+   43  sudo journalctl --vacuum-size=100M
+   44  sudo du -sh /var/lib/jenkins/*
+   45  df -h
+   46  ps -ef | grep jenkins
+   47  JAVA_OPTS="-Xms1024m -Xmx2048m -XX:+UseG1GC"
+   48  sudo systemctl restart jenkins
+   49  sudo 0i
+   50  sudo -i
+   51  htop
+   52  sudo apt update jenkins
+   53  sudo apt update
+   54  history 
